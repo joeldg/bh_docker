@@ -36,6 +36,9 @@ cd bowhead
 # Laravel needs these to be writable
 chmod 777 storage/logs
 chmod 777 bootstrap/cache
+chmod 777 /var/www/bowhead/storage/
+chmod 777 /var/www/bowhead/storage/framework/
+chmod 777 /var/www/bowhead/storage/framework/views/
 
 pip install python-env
 
@@ -79,9 +82,6 @@ pkill -HUP nginx
 pkill -HUP php-fpm
 rm -rf /var/cache/apk/*
 
-hown 777 /var/www/bowhead/storage/
-chmod 777 /var/www/bowhead/storage/framework/views/
-
 ip=`ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'`
 
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
@@ -95,6 +95,8 @@ echo "+-----      SETUP LOCATED AT:  http://$ip:8080/setup                -----+
 echo "+-----                                                              -----+"
 echo "+-----  use: 'php artisan bowhead:example_usage' for testing .env   -----+"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+sleep 5000
 
 # fire up supervisord
 /usr/bin/supervisord -c /etc/supervisor/conf.d/bowhead.conf
