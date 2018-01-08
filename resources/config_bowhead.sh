@@ -97,4 +97,4 @@ echo "+-----  use: 'php artisan bowhead:example_usage' for testing .env   -----+
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 # fire up supervisord
-/usr/bin/supervisord
+/usr/bin/supervisord -c /etc/supervisor/conf.d/bowhead.conf
