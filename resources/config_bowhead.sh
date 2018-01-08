@@ -36,9 +36,7 @@ cd bowhead
 # Laravel needs these to be writable
 chmod 777 storage/logs
 chmod 777 bootstrap/cache
-chmod 777 /var/www/bowhead/storage/
-chmod 777 /var/www/bowhead/storage/framework/
-chmod 777 /var/www/bowhead/storage/framework/views/
+chmod -R 777 /var/www/bowhead/storage/
 
 pip install python-env
 
