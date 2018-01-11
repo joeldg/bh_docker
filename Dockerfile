@@ -13,7 +13,7 @@ MAINTAINER joeldg@rxmg.com
 RUN apk add --update
 
 RUN apk add bzip2 curl vim wget git make gcc nasm git ack
-RUN apk add  nfs-utils jq py-pip libmcrypt-dev gnupg
+RUN apk add nfs-utils jq py-pip libmcrypt-dev gnupg
 RUN apk add curl make gcc nasm supervisor nfs-utils
 RUN apk add redis screen
 RUN apk add mariadb mariadb-client
