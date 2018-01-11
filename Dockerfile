@@ -48,6 +48,11 @@ RUN \
 
 #RUN usermod -u 1000 www-data
 
+VOLUME /var/lib/mysql
+VOLUME /var/lib/mysql/mysql-bin
+# VOLUME /PATH/TO/REDISDB
+# VOLUME /PATH/TO/REDISLOGS
+
 EXPOSE 8080
 EXPOSE 2049
 EXPOSE 20048
